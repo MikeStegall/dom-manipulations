@@ -38,12 +38,10 @@ document.querySelector('#blow-up button').addEventListener('click', function () 
 
 document.querySelector('#remove button').addEventListener('click', function () {
   // TASK #5
-  var liEl = document.querySelectorAll('#userList > li')
+  var liEl = document.querySelectorAll('#userList li')
   for (var i = 0; i < liEl.length; i++) {
-    if (liEl[i].textContent.indexOf('in') !== -1) {
+    if (liEl[i].textContent.indexOf('inactive') !== -1) {
       liEl[i].remove()
-    } else {
-      liEl[i].title = liEl[i].textContent
     }
   }
 })
