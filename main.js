@@ -48,10 +48,23 @@ document.querySelector('#remove button').addEventListener('click', function () {
 
 document.querySelector('#reverse-squares button').addEventListener('click', function () {
   // TASK #6
+  var square = document.querySelectorAll('.answer-box span')
+  var squareArr = Array.from(square)
+  var reverseSquare = squareArr.reverse()
+  var squarePlace = document.querySelector('#reverse-squares .answer-box')
+  for (var i = 0; i < reverseSquare.length; i++) {
+    squarePlace.appendChild(reverseSquare[i])
+  }
 })
 
 document.querySelector('#pig-latin button').addEventListener('click', function () {
   // TASK #7
+  var list = document.querySelectorAll('#tasks li')
+  for (var i = 0; i < list.length; i++) {
+    var listText = list[i].innerHTML
+    var reverseListText = listText.split('').reverse().join('')
+    list[i].innerHTML = reverseListText
+  }
 })
 
 document.querySelector('#cycle-image button').addEventListener('click', function () {
