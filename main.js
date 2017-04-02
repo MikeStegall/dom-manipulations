@@ -69,4 +69,11 @@ document.querySelector('#pig-latin button').addEventListener('click', function (
 
 document.querySelector('#cycle-image button').addEventListener('click', function () {
   // TASK #8
+  var img = document.querySelector('#city-img')
+  var imgSrc = img.getAttribute('src')
+  var subtractImgSrc = imgSrc.substr(0, imgSrc.length - 1)
+  var int = Math.floor(Math.random() * 9)
+  img.setAttribute('src', subtractImgSrc + int.toString())
+  console.log(int)
+  console.log(imgSrc)
 })
